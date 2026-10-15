@@ -1,35 +1,28 @@
-/*
-Problem: Largest Element in an Array
+import java.util.*;
 
-Approach:
-Traverse the array once and keep updating the maximum element.
+class Main {
+    public static void main(String[] args) {
 
-Time Complexity: O(n)
+        Scanner sc = new Scanner(System.in);
 
-Space Complexity: O(1)
-*/
+        int n = sc.nextInt();
 
-public class LargestElement {
+        int[] arr = new int[n];
 
-    public static int largestElement(int[] arr) {
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
 
         int max = arr[0];
 
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 1; i < n; i++) {
 
             if (arr[i] > max) {
                 max = arr[i];
             }
         }
 
-        return max;
-    }
-
-    public static void main(String[] args) {
-
-        int[] arr = {2, 5, 1, 3, 0};
-
-        System.out.println(largestElement(arr));
-
+        System.out.println(max);
+        sc.close();
     }
 }
