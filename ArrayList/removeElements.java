@@ -15,11 +15,7 @@ public class removeElements {
             arr.add(sc.nextInt());
         }
 
-        for (int i = arr.size() - 1; i >= 0; i--) {
-            if (arr.get(i) == target) {
-                arr.remove(i);
-            }
-        }
+        arr.removeIf(x -> x == target);
 
         for (int x : arr) {
             System.out.print(x + " ");
